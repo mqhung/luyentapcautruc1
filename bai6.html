@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Tiền hoa hồng</title>
+</head>
+<body>
+<h2>Kiểm tra số tiền hoa hồng  </h2>
+<label for="number">Nhập doanh số bán hàng</label>
+<input type="text" id="number"> <br>
+<input type="button" value="Check" onclick="disPlay();">
+<p id="result"></p>
+</body>
+<script>
+    function disPlay(){
+        let a = +document.getElementById('number').value;
+        if (a < 10000){
+            document.getElementById('result').innerHTML = "Tiền hoa hồng sẽ là " + (a*3/100);
+        }
+        else if (a<20000) {
+            document.getElementById('result').innerHTML = "Tiền hoa hồng sẽ là " + (a*5/100);
+        } else if (a<50000) {
+            document.getElementById('result').innerHTML = "Tiền hoa hồng sẽ là " + (a*10/100);
+        } else {
+            document.getElementById('result').innerHTML = "Tiền hoa hồng sẽ là " + (a*15/100);
+        }
+    }
+</script>
+</html>

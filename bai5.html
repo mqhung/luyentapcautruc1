@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Rate</title>
+</head>
+<body>
+<h2>Xếp hạng học lực</h2>
+<label for="number1">Nhập điểm kiểm tra </label>
+<input type="text" id="number1"> <br>
+<label for="number2">Nhập điểm giữa kỳ</label>
+<input type="text" id="number2"> <br>
+<label for="number3">Nhập điểm cuối kỳ</label>
+<input type="text" id="number3"> <br>
+<input type="button" value="Check" onclick="disPlay();">
+<p id="result"></p>
+</body>
+<script>
+    function disPlay(){
+        let a = +document.getElementById('number1').value;
+        let b = +document.getElementById('number2').value;
+        let c = +document.getElementById('number3').value;
+        let average = (a+b+c)/3;
+        if (average < 4) {
+            document.getElementById('result').innerHTML = "Xếp loại yếu";
+        } else if (average <6){
+            document.getElementById('result').innerHTML = "Xếp loại trung bình";
+        } else if (average <8){
+            document.getElementById('result').innerHTML = "Xếp loại khá";
+        }
+        else {
+            document.getElementById('result').innerHTML = "Xếp loại giỏi";
+        }
+
+    }
+</script>
+</html>

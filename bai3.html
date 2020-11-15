@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check number</title>
+</head>
+<body>
+<h2>Kiểm tra số nguyên </h2>
+<label for="number">Input Number</label>
+<input type="text" id="number"> <br>
+<input type="button" value="Check" onclick="disPlay();">
+<p id="result"></p>
+</body>
+<script>
+    function disPlay(){
+        let num = +document.getElementById('number').value;
+        if (num > 0) {
+            document.getElementById('result').innerHTML = "Số " + num + " là số dương";
+        } else {
+            document.getElementById('result').innerHTML = "Số " + num + " là số âm";
+        }
+    }
+</script>
+</html>

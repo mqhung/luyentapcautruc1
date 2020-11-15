@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Division</title>
+</head>
+<body>
+<h2>Kiểm tra số chia hết</h2>
+<label for="numa">Input number A</label>
+<input type="text" id="numa"> <br>
+<label for="numb">Input number B</label>
+<input type="text" id="numb"> <br>
+<input type="button" value="Check" onclick="disPlay();">
+<p id="result"></p>
+</body>
+<script>
+    function disPlay() {
+        let a = +document.getElementById("numa").value;
+        let b = +document.getElementById("numb").value;
+        if (a % b === 0) {
+            document.getElementById("result").innerText = "A chia hết cho B";
+        } else {
+            document.getElementById("result").innerText = " A không chia hết cho B";
+        }
+    }
+</script>
+</html>

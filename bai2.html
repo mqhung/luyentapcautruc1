@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student's Age Check</title>
+</head>
+<body>
+<h2>Kiểm tra số tuổi </h2>
+<label for="age">Input Age</label>
+<input type="text" id="age"> <br>
+<input type="button" value="Check" onclick="disPlay();">
+<p id="result"></p>
+</body>
+<script>
+    function disPlay(){
+        let age = +document.getElementById('age').value;
+        if (age >=15){
+            document.getElementById('result').innerHTML = "Học sinh đủ điều kiện học lớp 10"
+        } else {
+            document.getElementById('result').innerHTML = "Học sinh không đủ điều kiện học lớp 10"
+        }
+    }
+</script>
+</html>

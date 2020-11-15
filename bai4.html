@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Check maximum</title>
+</head>
+<body>
+<h2>Kiểm tra số lớn nhất</h2>
+<label for="number1">Input number A</label>
+<input type="text" id="number1"> <br>
+<label for="number2">Input number B</label>
+<input type="text" id="number2"> <br>
+<label for="number3">Input number C</label>
+<input type="text" id="number3"> <br>
+<input type="button" value="Check" onclick="disPlay();">
+<p id="result"></p>
+</body>
+<script>
+    function disPlay() {
+        let a = +document.getElementById('number1').value;
+        let b = +document.getElementById('number2').value;
+        let c = +document.getElementById('number3').value;
+        if (a > b) {
+            if (a > c) {
+                document.getElementById('result').innerHTML = a + " là số lớn nhất";
+            } else {
+                document.getElementById('result').innerHTML = c + " là số lớn nhất";
+            }
+        } else if (b>c) {
+                document.getElementById('result').innerHTML = b + " là số lớn nhất";
+            } else {
+                document.getElementById('result').innerHTML = c + " là số lớn nhất";
+            }
+        }
+</script>
+
+</html>

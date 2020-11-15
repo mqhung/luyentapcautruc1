@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Cước điện thoại</title>
+</head>
+<body>
+<h2>Kiểm tra số tiền cước điện thoại</h2>
+<label for="number">Nhập thời gian gọi</label>
+<input type="text" id="number"> <br>
+<input type="button" value="Check" onclick="disPlay();">
+<p id="result"></p>
+</body>
+<script>
+    function disPlay(){
+        let a = +document.getElementById('number').value;
+        if (a <= 30) {
+            document.getElementById('result').innerHTML = "Số tiền điện thoại sẽ là " + (a*500) + " đồng";
+        } else {
+            a = 30*500 + (a-30)*1000;
+            document.getElementById('result').innerHTML = "Số tiền điện thoại sẽ là " + a + " đồng";
+        }
+    }
+</script>
+</html>
